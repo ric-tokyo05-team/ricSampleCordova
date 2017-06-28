@@ -1,0 +1,9 @@
+platforms/*
+env/*
+node_modules/*
+plugins/*
+hooks/*
+res/*
+www/js/*
+.DS_Store
+.npmignore
