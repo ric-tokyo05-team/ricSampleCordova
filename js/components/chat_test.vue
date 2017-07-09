@@ -1,4 +1,4 @@
-te>
+<template>
     <div id="content">
         <p>チャットぺージ</p>
         <p>チャット画面を表示するテストページ</p>
