@@ -1,4 +1,5 @@
-<template>
+<template>  
+  <input v-model="command" placeholder="select command"　@keyup.enter="select_command">
     <div id="content">
         <p>チャットぺージ</p>
         <p>チャット画面を表示するテストページ</p>
