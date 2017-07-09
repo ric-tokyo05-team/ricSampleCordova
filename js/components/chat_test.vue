@@ -34,15 +34,7 @@
 </template>
 <script>
 export default {
-    name: 'third',
-    mounted: function() {
-        this.$store.dispatch('load_test_api');
-    },
-    computed: {
-        list: function() {
-            return this.$store.state.api_data;
-        }
-    }
+    name: 'third'
 }
 </script>
 
