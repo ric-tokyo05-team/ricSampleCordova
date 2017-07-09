@@ -1,6 +1,7 @@
 <template>
 <div id="content">
     <input v-model="command" placeholder="select command"　@keyup.enter="select_command">
+    <i class="fa fa-gratipay" aria-hidden="true"></i>
 
     <div id="attack_list" v-if="command_state === ''">
         <ul>
@@ -9,7 +10,7 @@
             </li>
         </ul>
     </div>
-    
+
     <div id="attack_list" v-if="command_state === 'たたかう'">
         <ul>
             <li v-for="a in attack_list">
@@ -81,4 +82,5 @@ export default {
     height: 2000px;
     margin-top: 60px;
 }
+
 </style>
