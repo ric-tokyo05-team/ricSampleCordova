@@ -8,7 +8,8 @@ Vue.use(Router)
 const router = new Router({
     routes: [
         { path: '/', name: 'First', component: First },
-        { path: '/second', name: 'Second', component: Second }
+        { path: '/second', name: 'Second', component: Second },
+        { path: '/third', name: 'Third', component: Third }
     ]
 })
 
