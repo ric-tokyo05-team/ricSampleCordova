@@ -2,6 +2,7 @@
     <div id="appfooter">
         <router-link to="/">first page</router-link>
         <router-link to="/second">second page</router-link>
+        <router-link to="/third">third page</router-link>
     </div>
 </template>
 
