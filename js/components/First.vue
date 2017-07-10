@@ -1,7 +1,7 @@
 <template>
 <div id="content">
-    <input v-model="command" placeholder="Search"　@keyup.enter="select_command">
-    <i class="fa fa-search" aria-hidden="true"></i>
+    <input v-model="command" placeholder="新宿 ディナー"　@keyup.enter="select_command">
+    <input type="search" image=<i class="fa fa-search" aria-hidden="true"></i>>
 
     <div id="attack_list" v-if="command_state === ''">
         <ul>
