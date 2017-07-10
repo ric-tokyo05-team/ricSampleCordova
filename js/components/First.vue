@@ -1,7 +1,9 @@
 <template>
+<link rel="stylesheet" href="./font-awesome/css/font-awesome.min.css">
 <div id="content">
     <input v-model="command" placeholder="新宿 ディナー"　@keyup.enter="select_command">
-    <input type="search" value="<i class="fa fa-search" aria-hidden="true"></i>"">
+    <input type="button" id="fontawesome_submit" value="&#xf002; ボタンのテスト">
+    <input type="search" value=<i class="fa fa-search" aria-hidden="true"></i>>
 
     <div id="attack_list" v-if="command_state === ''">
         <ul>
@@ -77,6 +79,10 @@ export default {
 </script>
 
 <style lang="scss">
+#fontawesome_submit{
+    font-family: FontAwesome;
+}
+
 #content {
     width: 100%;
     height: 2000px;
