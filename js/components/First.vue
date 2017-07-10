@@ -78,7 +78,7 @@ export default {
 </script>
 
 <style lang="scss">
-#fontawesome_submit{
+.fontawesome_submit{
     font-family: FontAwesome;
 }
 
