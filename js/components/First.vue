@@ -3,7 +3,7 @@
     <input v-model="command" placeholder="新宿 ディナー"　@keyup.enter="select_command">
     <input type="button" >
     <input type="submit" value="&#xf002;">
-    <input type="button" class="fontawesome_submit" value="&#xf002; ボタンのテスト">
+    <input type="button" class="fa fa-search" >
     <i class="fa fa-search" aria-hidden="true"></i>
 
     <div id="attack_list" v-if="command_state === ''">
@@ -79,10 +79,6 @@ export default {
 }
 </script>
 
-<style lang="scss">
-input[type=submit]{
-    font-family: FontAwesome;
-}
 
 #content {
     width: 100%;
