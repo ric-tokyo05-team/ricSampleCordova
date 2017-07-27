@@ -1,8 +1,6 @@
 <template>
 
   <div id="content">
-
-    <link rel="stylesheet" type="text/css" href="css">
     <input v-model="command" placeholder="新宿 ディナー"　@keyup.enter="select_command">
     <input type="button" >
     <input type="submit" class="fontawesome_submit" value="&#xf002;">
@@ -89,4 +87,10 @@ export default {
     margin-top: 60px;
 }
 
+</style>
+
+<style type="text/css">
+.fontawesome_submit{
+    font-family: FontAwesome;
+}
 </style>
