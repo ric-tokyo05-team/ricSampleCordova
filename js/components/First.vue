@@ -2,7 +2,9 @@
 
   <div id="content">
     <input v-model="command" placeholder="新宿 ディナー"　@keyup.enter="select_command">
-    <input type="submit" value="&#xe986;">
+    <div class="test">
+      <i class="fa fa-search" aria-hidden="true"></i>
+    </div>
 
 
     <div id="attack_list" v-if="command_state === ''">
@@ -84,6 +86,12 @@ export default {
     width: 100%;
     height: 2000px;
     margin-top: 60px;
+}
+
+#test {
+  width: 50px;
+  height: 50px;
+  color: navy;
 }
 
 input[type=submit]{
