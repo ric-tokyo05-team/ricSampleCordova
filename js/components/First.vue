@@ -3,9 +3,9 @@
   <div id="content">
     <input v-model="command" placeholder="新宿 ディナー"　@keyup.enter="select_command">
     <input type="submit" value="&#xf002;">
-    <input type="button" value="&#xe986;">
-    <input type="submit" value="&#xe986;">
-    <input type="submit" class="icon-search">
+    <input type="button" value="&#x20;">
+    <input type="submit" value="&#x20;">
+    <input type="button" class="icon-search">
     <span class="icon-search">
     </span>
 
