@@ -5,6 +5,8 @@
     <input type="submit" value="&#xf002;">
     <input type="submit" class="icon-search">
 
+        <span class="icon-search"></span>
+
     <div id="attack_list" v-if="command_state === ''">
         <ul>
             <li v-for="c in command_list">
