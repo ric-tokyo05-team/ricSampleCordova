@@ -88,10 +88,15 @@ export default {
     margin-top: 60px;
 }
 
+.fontawesome_submit{
+    font-family: FontAwesome;
+}
+
 </style>
 
 
 <style type="text/css">
+
 input[type=submit]{
 font-family: FontAwesome /*FontAwesomeをフォント指定*/;
 }
