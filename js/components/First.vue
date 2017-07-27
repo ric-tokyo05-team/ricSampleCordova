@@ -1,8 +1,8 @@
 <template>
   <div id="content">
-    <link rel="stylesheet" href="./font-awesome/css/font-awesome.min.css">
     <input v-model="command" placeholder="新宿 ディナー"　@keyup.enter="select_command">
     <input type="button" >
+    <input type="submit" value="&#xf002;">
     <input type="button" class="fontawesome_submit" value="&#xf002; ボタンのテスト">
     <i class="fa fa-search" aria-hidden="true"></i>
 
@@ -80,7 +80,7 @@ export default {
 </script>
 
 <style lang="scss">
-.fontawesome_submit{
+input[type=submit]{
     font-family: FontAwesome;
 }
 
