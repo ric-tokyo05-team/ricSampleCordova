@@ -2,12 +2,8 @@
 
   <div id="content">
     <input v-model="command" placeholder="新宿 ディナー"　@keyup.enter="select_command">
-    <input type="submit" value="&#xf002;">
-    <input type="button" value="&#x20;">
-    <input type="submit" value="&#x20;">
-    <input type="button" class="icon-search">
-    <span class="icon-search" style="color:#4dccf5">
-    </span>
+    <input type="search" class="fa fa-search" aria-hidden="true">
+
 
     <div id="attack_list" v-if="command_state === ''">
         <ul>
