@@ -3,7 +3,8 @@
   <div id="content">
     <input v-model="command" placeholder="新宿 ディナー"　@keyup.enter="select_command">
     <input type="submit" value="&#xf002;">
-    <input type="button" class="icon-search">
+    <input type="button" value="icon-search">
+    <input type="submit" value="icon-search">
 
     <div id="attack_list" v-if="command_state === ''">
         <ul>
