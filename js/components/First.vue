@@ -8,6 +8,15 @@
     <span class="icon-search">
     </span>
 
+
+    <div class="clearfix bshadow0 pbs">
+        <span class="icon-search">
+
+        </span>
+        <span class="mls"> icon-search</span>
+    </div>
+
+
     <div id="attack_list" v-if="command_state === ''">
         <ul>
             <li v-for="c in command_list">
