@@ -92,6 +92,7 @@ export default {
   width: 50px;
   height: 50px;
   color: navy;
+  float: left;
 }
 
 input[type=submit]{
