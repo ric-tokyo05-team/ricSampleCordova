@@ -1,7 +1,7 @@
 <template>
 <div id="content">
     <input v-model="command" placeholder="新宿 ディナー"　@keyup.enter="select_command">
-    <input type="button" class="fontawesome_submit" value="&#xf002;">
+    <input type="button" class="fa fa-search" value=&#xf002;>
     <input type="button" value=<i class="fa fa-search" aria-hidden="true"></i>>
 
     <div id="attack_list" v-if="command_state === ''">
