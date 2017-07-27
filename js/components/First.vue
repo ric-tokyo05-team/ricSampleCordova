@@ -80,12 +80,6 @@ export default {
 }
 </script>
 
-<style lang="css">
-input[type=submit]{
-font-family: FontAwesome /*FontAwesomeをフォント指定*/;
-}
-
-
 <style lang="scss">
 
 #content {
