@@ -5,6 +5,8 @@
     <input type="submit" value="&#xf002;">
     <input type="button" value="\e986;">
     <input type="submit" value="\e986;">
+    <span class="icon-search">
+    </span>
 
     <div id="attack_list" v-if="command_state === ''">
         <ul>
