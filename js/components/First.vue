@@ -6,7 +6,7 @@
     <input type="button" value="&#x20;">
     <input type="submit" value="&#x20;">
     <input type="button" class="icon-search">
-    <span class="icon-search">
+    <span class="icon-search" style="color:#4dccf5">
     </span>
 
     <div id="attack_list" v-if="command_state === ''">
