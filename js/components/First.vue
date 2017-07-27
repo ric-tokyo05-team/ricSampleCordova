@@ -2,10 +2,7 @@
 
   <div id="content">
     <input v-model="command" placeholder="新宿 ディナー"　@keyup.enter="select_command">
-    <input type="button" >
-    <input type="submit" id="fontawesome_submit" value="&#xf002;">
-    <input type="submit" value="&#xf002;">
-    <i class="fa fa-search" aria-hidden="true"></i>
+    <input type="button" id="fontawesome_submit" value="&#xf002;">
 
     <div id="attack_list" v-if="command_state === ''">
         <ul>
@@ -92,16 +89,4 @@ export default {
     font-family: FontAwesome;
 }
 
-</style>
-
-
-<style type="text/css">
-
-input[type=submit]{
-font-family: FontAwesome /*FontAwesomeをフォント指定*/;
-}
-
-.fontawesome_submit{
-    font-family: FontAwesome;
-}
 </style>
