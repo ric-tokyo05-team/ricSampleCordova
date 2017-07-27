@@ -1,6 +1,8 @@
 <template>
-  <link rel="stylesheet" type="text/css" href="css">
+
   <div id="content">
+
+    <link rel="stylesheet" type="text/css" href="css">
     <input v-model="command" placeholder="新宿 ディナー"　@keyup.enter="select_command">
     <input type="button" >
     <input type="submit" class="fontawesome_submit" value="&#xf002;">
