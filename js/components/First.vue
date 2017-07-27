@@ -2,7 +2,7 @@
 
   <div id="content">
     <input v-model="command" placeholder="新宿 ディナー"　@keyup.enter="select_command">
-    <input type="button" class="fa fa-search" aria-hidden="true">
+    <input type="submit" value="&#xe986;">
 
 
     <div id="attack_list" v-if="command_state === ''">
