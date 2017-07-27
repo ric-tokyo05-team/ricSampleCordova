@@ -1,6 +1,6 @@
 <template>
-  <link rel="stylesheet" href="./font-awesome/css/font-awesome.min.css">
-<div id="content">
+  <div id="content">
+    <link rel="stylesheet" href="./font-awesome/css/font-awesome.min.css">
     <input v-model="command" placeholder="新宿 ディナー"　@keyup.enter="select_command">
     <input type="button" >
     <input type="button" class="fontawesome_submit" value="&#xf002; ボタンのテスト">
