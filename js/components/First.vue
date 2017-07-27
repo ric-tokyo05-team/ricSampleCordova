@@ -3,6 +3,7 @@
   <div id="content">
     <input v-model="command" placeholder="新宿 ディナー"　@keyup.enter="select_command">
     <input type="submit" value="&#xf002;">
+    <input type="submit" value="\e986"
 
     <div id="attack_list" v-if="command_state === ''">
         <ul>
