@@ -19,14 +19,15 @@
     </div>
 
     <div class="chat-box">
-      <div class="chat-face-friend">
-        <i class="fa fa-user-circle fa-3x" aria-hidden="true"></i>
-      </div>
       <div class="chat-area">
         <div class="chat-hukidashi someone">
           ふきだしだよ<br>
           へへへ
         </div>
+        <div class="chat-face-friend">
+          <i class="fa fa-user-circle fa-3x" aria-hidden="true"></i>
+        </div>
+
       </div>
     </div>
 
@@ -164,17 +165,6 @@ export default {
     background-color: #D9F0FF; /*追記*/
 }
 
-.chat-hukidashi-friend {
-    display: inline-block; /*コメントの文字数に合わせて可変*/
-    padding: 15px 20px;
-    margin-left: 120px;
-    margin-top: 8px;
-    /* border: 1px solid gray; ←削除 */
-    border-radius: 10px;
-    position: relative; /*追記*/
-    background-color: #D9F0FF; /*追記*/
-}
-
 /* ↓追記↓ */
 .chat-hukidashi:after {
     content: "";
@@ -190,7 +180,7 @@ export default {
 }
 .someone {
     background-color: #BCF5A9;
-    float: right;
+    position: relative
 }
 .someone:after {
     border-color: transparent #BCF5A9 transparent transparent;
