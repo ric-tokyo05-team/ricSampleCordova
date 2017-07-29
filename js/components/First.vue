@@ -192,14 +192,14 @@ export default {
 .chat-hukidashi-friend:after {
     content: "";
     position: absolute;
-    top: 50%; right: -10px;
+    top: 50%; right: -20px;
     margin-top: -10px;
     display: block;
     width: 0px;
     height: 0px;
     border-style: solid;
     border-width: 10px 10px 10px 10px;
-    border-color: red navy yellow #D9F0FF;
+    border-color: transparent transparent transparent #D9F0FF;
 }
 
 .someone {
@@ -209,7 +209,4 @@ export default {
     float: right;
 }
 
-.someone:after {
-    border-color: transparent transparent transparent #BCF5A9;
-}
 </style>
