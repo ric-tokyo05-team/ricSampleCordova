@@ -9,7 +9,7 @@
 
       <div class="chat-box">
       <div class="chat-face">
-        <img src="./icon_man.jpeg" alt="自分のチャット画像です。" width="60" height="60">
+        <img src="../icon_man.jpeg" alt="自分のチャット画像です。" width="60" height="60">
       </div>
       <div class="chat-area">
         <div class="chat-hukidashi">
@@ -20,7 +20,7 @@
 
     <div class="chat-box">
       <div class="chat-face">
-        <img src="./icon_man.jpeg" alt="誰かのチャット画像です。" width="60" height="60">
+        <img src="../icon_man.jpeg" alt="誰かのチャット画像です。" width="60" height="60">
       </div>
       <div class="chat-area">
         <div class="chat-hukidashi someone">
