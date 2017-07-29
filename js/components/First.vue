@@ -42,9 +42,9 @@
 
         <div class="send">
         <input v-model="message" placeholder="投稿する！">
-          <a class="send_bottun" href="test_search.vue">
-            <span class="fa fa-send"></span>
-          </a>
+          <router-link to="/second"><i class="send_bottun">
+            <span class="fa fa-send"></span></router-link>
+          </i>
         </div>
 
     <div id="attack_list" v-if="command_state === ''">
