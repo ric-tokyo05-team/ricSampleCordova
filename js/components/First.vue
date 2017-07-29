@@ -1,8 +1,8 @@
 <template>
   <div id="content">
-    <div>
+    <div class="search">
     <input v-model="command" placeholder="新宿 ディナー"　@keyup.enter="select_command">
-      <a class="search" href="https://google.com/">
+      <a class="search_bottun" href="https://google.com/">
         <span class="fa fa-search"></span>
       </a>
     </div>
@@ -118,7 +118,11 @@ export default {
 }
 
 /* 検索ボタン */
-.search {
+.search{
+  text-align: center;
+}
+
+.search_bottun {
   background-color : #FFFFFF;
   color: #4682B4;
   width: 60px;
