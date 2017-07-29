@@ -9,7 +9,7 @@
 
       <div class="chat-box">
       <div class="chat-face">
-        <img src="img/icon_man.jpg" alt="自分のチャット画像です。">
+        <i class="fa fa-user-circle-o" aria-hidden="true"></i>
       </div>
       <div class="chat-area">
         <div class="chat-hukidashi">
@@ -20,7 +20,7 @@
 
     <div class="chat-box">
       <div class="chat-face">
-        <img src="img/icon_man.jpg" alt="誰かのチャット画像です。">
+        <i class="fa fa-user-circle-o" aria-hidden="true"></i>
       </div>
       <div class="chat-area">
         <div class="chat-hukidashi someone">
@@ -124,6 +124,7 @@ export default {
   height: 60px;
 }
 
+/* チャットレイアウト */
 .chat-box {
     width: 100%;
     height: auto;
@@ -147,11 +148,13 @@ export default {
     display: inline-block; /*コメントの文字数に合わせて可変*/
     padding: 15px 20px;
     margin-left: 120px;
-    margin-top: 10px;
-    border: 1px solid gray;
+    margin-top: 8px;
+    /* border: 1px solid gray; ←削除 */
     border-radius: 10px;
+    position: relative; /*追記*/
+    background-color: #D9F0FF; /*追記*/
 }
-
+/* ↓追記↓ */
 .chat-hukidashi:after {
     content: "";
     position: absolute;
