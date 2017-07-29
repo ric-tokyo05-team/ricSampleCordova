@@ -6,6 +6,7 @@
         <i class="fa fa-search" aria-hidden="true"></i>
       <a class="icon-search" href="https://google.com"></a>
         <i class="icon-search" aria-hidden="true"></i>
+      <span class="icon-search"></span>
       </li>
     </div>
 
