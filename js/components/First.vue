@@ -1,5 +1,5 @@
 <template>
-
+  <link href="./css" type="text/css">
   <div id="content">
     <input v-model="command" placeholder="新宿 ディナー"　@keyup.enter="select_command">
     <div class="test">
