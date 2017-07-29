@@ -199,7 +199,7 @@ export default {
     height: 0px;
     border-style: solid;
     border-width: 10px 10px 10px 10px;
-    border-color: transparent transparent transparent #D9F0FF;
+    border-color: red navy yellow #D9F0FF;
 }
 
 .someone {
