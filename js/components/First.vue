@@ -18,13 +18,6 @@
       </div>
     </div>
 
-    <div class="send">
-    <input v-model="command" placeholder="投稿する！"　@keyup.enter="select_command">
-      <a class="send_bottun" href="https://google.com/">
-        <span class="fa fa-send"></span>
-      </a>
-    </div>
-
     <div class="chat-box">
       <div class="chat-area">
         <div class="chat-face-friend">
@@ -32,6 +25,13 @@
         </div>
         <div class="chat-hukidashi-friend someone">
           レストラン〇〇なんていかがでしょうか。
+        </div>
+
+        <div class="send">
+        <input v-model="command" placeholder="投稿する！"　@keyup.enter="select_command">
+          <a class="send_bottun" href="https://google.com/">
+            <span class="fa fa-send"></span>
+          </a>
         </div>
 
       </div>
