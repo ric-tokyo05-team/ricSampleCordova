@@ -1,9 +1,11 @@
 <template>
   <div id="content">
+    <div>
     <input v-model="command" placeholder="新宿 ディナー"　@keyup.enter="select_command">
       <a class="search" href="https://google.com/">
         <span class="fa fa-search"></span>
       </a>
+    </div>
 
 
     <div id="attack_list" v-if="command_state === ''">
@@ -94,8 +96,8 @@ export default {
 }
 
 .search a{
-  background-color : navy;
-  color: black;
+  background-color : #000000;
+  color: #F4A460;
   width: 50px;
   height: 50px;
 }
