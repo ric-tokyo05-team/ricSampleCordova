@@ -198,8 +198,8 @@ export default {
     width: 0px;
     height: 0px;
     border-style: solid;
-    border-width: 10px 10px 0 10px;
-    border-color: transparent transparent #D9F0FF transparent;
+    border-width: 10px 10px 10px 0;
+    border-color: transparent transparent transparent #D9F0FF;
 }
 
 .someone {
