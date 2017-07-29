@@ -168,7 +168,7 @@ export default {
     width: 100%;
     height: auto;
     overflow: hidden; /*floatの解除*/
-    margin-bottom: 20px;
+    margin-bottom: 10px;
 }
 
 .chat-face {
