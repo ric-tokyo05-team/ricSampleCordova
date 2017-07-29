@@ -20,12 +20,12 @@
 
     <div class="chat-box">
       <div class="chat-area">
+        <div class="chat-face-friend">
+          <i class="fa fa-user-circle fa-3x" aria-hidden="true"></i>
         <div class="chat-hukidashi someone">
           ふきだしだよ<br>
           へへへ
         </div>
-        <div class="chat-face-friend">
-          <i class="fa fa-user-circle fa-3x" aria-hidden="true"></i>
         </div>
 
       </div>
