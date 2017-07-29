@@ -13,7 +13,7 @@
       </div>
       <div class="chat-area">
         <div class="chat-hukidashi">
-          ふきだしなのですーふきだしですーふきだー
+          新宿でおすすめのディナーを教えて！
         </div>
       </div>
     </div>
@@ -24,8 +24,7 @@
           <i class="fa fa-user-circle fa-3x" aria-hidden="true"></i>
         </div>
         <div class="chat-hukidashi-friend someone">
-          ふきだしだよ<br>
-          へへへ
+          レストラン〇〇なんていかがでしょうか。
         </div>
 
       </div>
