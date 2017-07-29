@@ -206,7 +206,6 @@ export default {
 }
 
 .someone {
-    margin-right: 120px;
     background-color: #BCF5A9;
     position: relative;
     float: right;
