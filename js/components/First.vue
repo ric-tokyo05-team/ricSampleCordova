@@ -157,7 +157,6 @@ export default {
 .chat-hukidashi {
     display: inline-block; /*コメントの文字数に合わせて可変*/
     padding: 15px 20px;
-    margin-left: 120px;
     margin-top: 8px;
     /* border: 1px solid gray; ←削除 */
     border-radius: 10px;
