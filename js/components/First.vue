@@ -33,7 +33,7 @@
         </div>
         <div class="chat-area">
           <div class="chat-hukidashi">
-            {{message}}
+            <p>{{ message }}</p>
           </div>
         </div>
       </div>
