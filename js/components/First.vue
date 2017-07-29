@@ -18,6 +18,13 @@
       </div>
     </div>
 
+    <div class="send">
+    <input v-model="command" placeholder="投稿する！"　@keyup.enter="select_command">
+      <a class="send_bottun" href="https://google.com/">
+        <span class="fa fa-send"></span>
+      </a>
+    </div>
+
     <div class="chat-box">
       <div class="chat-area">
         <div class="chat-face-friend">
@@ -124,6 +131,20 @@ export default {
 }
 
 .search_bottun {
+  background-color : #FFFFFF;
+  color: #4682B4;
+  width: 60px;
+  height: 60px;
+}
+
+/* 投稿ボタン */
+.send{
+  text-align: center;
+  float: top;
+  margin-bottom: 10px;
+}
+
+.send_bottun {
   background-color : #FFFFFF;
   color: #4682B4;
   width: 60px;
