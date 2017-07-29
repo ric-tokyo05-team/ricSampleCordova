@@ -27,8 +27,19 @@
           レストラン〇〇なんていかがでしょうか。
         </div>
 
+        <div class="chat-box">
+        <div class="chat-face">
+          <i class="fa fa-user-circle-o fa-3x" aria-hidden="true"></i>
+        </div>
+        <div class="chat-area">
+          <div class="chat-hukidashi">
+            {{message}}
+          </div>
+        </div>
+      </div>
+
         <div class="send">
-        <input v-model="command" placeholder="投稿する！"　@keyup.enter="select_command">
+        <input v-model="message" placeholder="投稿する！"　@keyup.enter="select_command">
           <a class="send_bottun" href="https://google.com/">
             <span class="fa fa-send"></span>
           </a>
