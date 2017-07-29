@@ -93,7 +93,11 @@ export default {
   color: navy;
 }
 
-.tweet a{background-color : #55acee;}
+.tweet a{
+  background-color : navy;
+  width: 50px;
+  height: 50px;
+}
 
 .icon-search:before {
   content: "\e986";
