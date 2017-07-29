@@ -2,7 +2,7 @@
   <div id="content">
     <input v-model="command" placeholder="新宿 ディナー"　@keyup.enter="select_command">
     <div class="test">
-      <a class="fa fa-search" href="https://google.com/"></a>
+      <a class="tweet" href="https://google.com/"><span class="fa fa-search" style="color:#4dccf5"></span></a>
         <i class="fa fa-search" aria-hidden="true"></i>
       <a class="icon-search" href="https://google.com"></a>
         <i class="icon-search" aria-hidden="true"></i>
@@ -103,6 +103,8 @@ export default {
 input[type=submit]{
 font-family: FontAwesome;
 }
+
+.tweet a{background-color : #55acee;}
 
 .icon-search:before {
   content: "\e986";
