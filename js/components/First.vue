@@ -136,9 +136,9 @@ export default {
     overflow: hidden; /*floatの解除*/
     margin-bottom: 20px;
 }
+
 .chat-face {
     float: left;
-    margin-right: -120px;
     color: #4682B4;
 }
 
