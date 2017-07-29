@@ -201,7 +201,7 @@ export default {
     width: 0px;
     height: 0px;
     border-style: solid;
-    border-width: 10px 10px 10px 0px;
+    border-width: 10px 10px 10px 10px;
     border-color: transparent transparent transparent #BCF5A9;
 }
 
