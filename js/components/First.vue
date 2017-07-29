@@ -120,6 +120,7 @@ export default {
 /* 検索ボタン */
 .search{
   text-align: center;
+  margin-bottom: 10px;
 }
 
 .search_bottun {
