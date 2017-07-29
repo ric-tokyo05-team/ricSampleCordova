@@ -1,7 +1,7 @@
 <template>
   <div class="chat-box">
   <div class="chat-face">
-    <img src="[自分の画像URL]" alt="自分のチャット画像です。" width="90" height="90">
+    <img src="./icon_man.jpeg" alt="自分のチャット画像です。" width="90" height="90">
   </div>
   <div class="chat-area">
     <div class="chat-hukidashi">
@@ -12,7 +12,7 @@
 
 <div class="chat-box">
   <div class="chat-face">
-    <img src="[相手の画像URL]" alt="誰かのチャット画像です。" width="90" height="90">
+    <img src="./icon_man.jpeg" alt="誰かのチャット画像です。" width="90" height="90">
   </div>
   <div class="chat-area">
     <div class="chat-hukidashi someone">
