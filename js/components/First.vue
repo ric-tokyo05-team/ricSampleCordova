@@ -19,8 +19,8 @@
     </div>
 
     <div class="chat-box">
-      <div class="chat-face">
-        <i class="fa fa-user-circle-o fa-3x" aria-hidden="true"></i>
+      <div class="chat-face-friend">
+        <i class="fa fa-user-circle fa-3x" aria-hidden="true"></i>
       </div>
       <div class="chat-area">
         <div class="chat-hukidashi someone">
@@ -137,6 +137,13 @@ export default {
     margin-right: -120px;
     color: #4682B4;
 }
+
+.chat-face-friend {
+    float: right;
+    margin-left: -120px;
+    color: #4682B4;
+}
+
 .chat-face img{
     border-radius: 30px;
     border: 1px solid #ccc;
