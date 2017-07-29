@@ -210,6 +210,6 @@ export default {
 }
 
 .someone:after {
-    border-color: transparent #BCF5A9 transparent transparent;
+    border-color: transparent transparent transparent #BCF5A9;
 }
 </style>
