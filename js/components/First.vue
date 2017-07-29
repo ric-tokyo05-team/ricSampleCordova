@@ -4,6 +4,7 @@
     <input v-model="command" placeholder="新宿 ディナー"　@keyup.enter="select_command">
     <div class="test">
       <i class="fa fa-search" aria-hidden="true"></i>
+      <i class="icon-search" href="https://google.com/"></i>
     </div>
 
 
