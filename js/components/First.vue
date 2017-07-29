@@ -42,7 +42,7 @@
 
         <div class="send">
         <input v-model="message" placeholder="投稿する！">
-          <a class="send_bottun" href="./test_search.vue">
+          <a class="send_bottun" href="test_search.vue">
             <span class="fa fa-send"></span>
           </a>
         </div>
