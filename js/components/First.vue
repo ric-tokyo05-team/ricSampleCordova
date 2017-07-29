@@ -8,9 +8,9 @@
     </div>
 
       <div class="chat-box">
-      <div class="chat-face">
-        <i class="fa fa-user-circle-o fa-3x" aria-hidden="true"></i>
-      </div>
+        <div class="chat-face">
+          <i class="fa fa-user-circle-o fa-3x" aria-hidden="true"></i>
+        </div>
       <div class="chat-area">
         <div class="chat-hukidashi">
           新宿でおすすめのディナーを教えて！
@@ -26,6 +26,8 @@
         <div class="chat-hukidashi-friend someone">
           レストラン〇〇なんていかがでしょうか。
         </div>
+      </div>
+    </div>
 
         <div class="chat-box">
         <div class="chat-face">
@@ -44,9 +46,6 @@
             <span class="fa fa-send"></span>
           </a>
         </div>
-
-      </div>
-    </div>
 
     <div id="attack_list" v-if="command_state === ''">
         <ul>
