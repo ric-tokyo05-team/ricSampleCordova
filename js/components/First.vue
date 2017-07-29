@@ -96,10 +96,10 @@ export default {
 }
 
 .search {
-  background-color : #000000;
-  color: #F4A460;
-  width: 50px;
-  height: 50px;
+  background-color : #FFFFFF;
+  color: #000000;
+  width: 60px;
+  height: 60px;
 }
 
 </style>
