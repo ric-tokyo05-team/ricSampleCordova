@@ -16,7 +16,7 @@ export default {
     top: 0;
     width: 100%;
     height: 60px;
-    background-color: #000000;
+    background-color: #40E0D0;
     z-index: 999;
 }
 </style>

@@ -97,7 +97,7 @@ export default {
 
 .search {
   background-color : #FFFFFF;
-  color: #000000;
+  color: #4682B4;
   width: 60px;
   height: 60px;
 }
