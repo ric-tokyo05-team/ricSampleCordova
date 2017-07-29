@@ -23,7 +23,7 @@
         <div class="chat-face-friend">
           <i class="fa fa-user-circle fa-3x" aria-hidden="true"></i>
         </div>
-        <div class="chat-hukidashi someone">
+        <div class="chat-hukidashi-friend someone">
           ふきだしだよ<br>
           へへへ
         </div>
@@ -164,13 +164,23 @@ export default {
     background-color: #D9F0FF; /*追記*/
 }
 
+.chat-hukidashi-friend {
+    display: inline-block; /*コメントの文字数に合わせて可変*/
+    padding: 15px 20px;
+    margin-left: 120px;
+    margin-top: 8px;
+    /* border: 1px solid gray; ←削除 */
+    border-radius: 10px;
+    position: relative; /*追記*/
+    background-color: #D9F0FF; /*追記*/
+}
+
 /* ↓追記↓ */
 .chat-hukidashi:after {
     content: "";
     position: absolute;
     top: 50%; left: -10px;
     margin-top: -10px;
-    margin-right: -120px;
     display: block;
     width: 0px;
     height: 0px;
@@ -178,7 +188,22 @@ export default {
     border-width: 10px 10px 10px 0;
     border-color: transparent #D9F0FF transparent transparent;
 }
+
+.chat-hukidashi-friend:after {
+    content: "";
+    position: absolute;
+    top: 50%; left: -10px;
+    margin-top: -10px;
+    display: block;
+    width: 0px;
+    height: 0px;
+    border-style: solid;
+    border-width: 10px 10px 10px 0;
+    border-color: transparent #D9F0FF transparent transparent;
+}
+
 .someone {
+    margin-right: 120px;
     background-color: #BCF5A9;
     position: relative;
     float: right;
