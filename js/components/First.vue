@@ -180,7 +180,6 @@ export default {
 .chat-face-friend {
     float: right;
     margin-left: auto;
-    margin-bottom: 10px;
     color: #4682B4;
 }
 
