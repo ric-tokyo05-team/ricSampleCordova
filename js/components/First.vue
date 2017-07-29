@@ -139,11 +139,13 @@ export default {
 
 .chat-face {
     float: left;
+    margin-right: auto;
     color: #4682B4;
 }
 
 .chat-face-friend {
     float: right;
+    margin-left: auto;
     color: #4682B4;
 }
 
