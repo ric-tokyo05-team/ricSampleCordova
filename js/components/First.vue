@@ -198,8 +198,6 @@ export default {
     width: 0px;
     height: 0px;
     border-style: solid;
-    border-right: 0;
-    border-left: 10px sorid #ccc;
     border-width: 10px 10px 10px 10px;
     border-color: transparent #D9F0FF transparent transparent;
 }
