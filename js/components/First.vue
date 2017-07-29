@@ -200,8 +200,8 @@ export default {
     border-style: solid;
     border-right: 0;
     border-left: 10px sorid #ccc;
-    border-top: 10px solid transparent;
-    border-bottom: 10px solid transparent;
+    border-width: 0 10px 10px 10px;
+    border-color: transparent transparent #D9F0FF transparent;
 }
 
 .someone {
