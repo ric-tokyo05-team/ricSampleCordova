@@ -170,6 +170,7 @@ export default {
     position: absolute;
     top: 50%; left: -10px;
     margin-top: -10px;
+    margin-right: -120px;
     display: block;
     width: 0px;
     height: 0px;
