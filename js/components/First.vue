@@ -1,11 +1,11 @@
 <template>
-  <link href="./css" type="text/css">
   <div id="content">
     <input v-model="command" placeholder="新宿 ディナー"　@keyup.enter="select_command">
     <div class="test">
-
-      <li class="tweet"><a class="fa fa-search" href="https://google.com/"></a>
+      <a class="fa fa-search" href="https://google.com/"></a>
         <i class="fa fa-search" aria-hidden="true"></i>
+      <a class="icon-search" href="https://google.com"></a>
+        <i class="icon-search" aria-hidden="true"></i>
       </li>
     </div>
 
@@ -102,4 +102,7 @@ input[type=submit]{
 font-family: FontAwesome;
 }
 
+.icon-search:before {
+  content: "\e986";
+}
 </style>
