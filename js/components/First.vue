@@ -139,7 +139,7 @@ export default {
 
 .chat-face {
     float: left;
-    margin-right: auto;
+    margin-right: -120px;
     color: #4682B4;
 }
 
