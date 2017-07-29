@@ -181,7 +181,9 @@ export default {
 .someone {
     background-color: #BCF5A9;
     position: relative;
+    float: right;
 }
+
 .someone:after {
     border-color: transparent #BCF5A9 transparent transparent;
 }
