@@ -141,7 +141,6 @@ export default {
 
 .chat-face-friend {
     float: right;
-    margin-left: -120px;
     color: #4682B4;
 }
 
