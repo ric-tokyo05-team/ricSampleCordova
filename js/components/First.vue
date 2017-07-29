@@ -39,7 +39,7 @@
       </div>
 
         <div class="send">
-        <input v-model="message" placeholder="投稿する！"　@keyup.enter="select_command">
+        <input v-model="message" placeholder="投稿する！">
           <a class="send_bottun" href="https://google.com/">
             <span class="fa fa-send"></span>
           </a>
