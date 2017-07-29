@@ -1,6 +1,6 @@
 import Vue from 'vue'
 import Router from 'vue-router'
-import First from './components/First.vue', './components/chat.vue'
+import First from './components/First.vue'
 import Second from './components/Second.vue'
 
 Vue.use(Router)
