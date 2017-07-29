@@ -24,38 +24,7 @@
 </template>
 
 <script>
-export default {
-    name: 'First',
-    data: function() {
-        return {
-            command: "",
-        }
-    },
 
-    computed: {
-        command_state: function() {
-            return this.$store.state.command;
-        },
-        command_list: function() {
-            return this.$store.state.command_list;
-        },
-        attack_list: function() {
-            return this.$store.state.attack_list;
-        },
-        item_list: function() {
-            return this.$store.state.item_list;
-        },
-        magic_list: function() {
-            return this.$store.state.magic_list;
-        }
-    },
-
-    methods: {
-        select_command(event) {
-            this.$store.commit("select_command", this.command);
-        }
-    }
-}
 </script>
 
 <style lang="scss">
@@ -64,12 +33,6 @@ export default {
     width: 100%;
     height: 2000px;
     margin-top: 60px;
-}
-
-#test {
-  width: 50px;
-  height: 50px;
-  color: navy;
 }
 
 .chat-box {
