@@ -3,9 +3,8 @@
   <div id="content">
     <input v-model="command" placeholder="新宿 ディナー"　@keyup.enter="select_command">
     <div class="test">
-
-      <li class="tweet"><a class="fa fa-search" href="https://google.com/"></a>
-        <i class="fa fa-search" aria-hidden="true"></i>
+      <li class="tweet"><a  href="https://google.com/"></a>
+        <span class="fa fa-search" aria-hidden="true"></span>
       </li>
     </div>
 
