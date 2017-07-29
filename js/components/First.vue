@@ -206,7 +206,7 @@ export default {
 
 .chat-hukidashi-friend {
     display: inline-block; /*コメントの文字数に合わせて可変*/
-    padding: 15px 20px;
+    padding: 15px 10px;
     margin-right: 20px;
     margin-bottom: 10px;
     /* border: 1px solid gray; ←削除 */
