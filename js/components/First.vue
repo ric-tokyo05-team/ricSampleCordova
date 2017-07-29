@@ -33,7 +33,9 @@
         </div>
         <div class="chat-area">
           <div class="chat-hukidashi">
-            <p>{{ message }}</p>
+            <div id="send_message">
+              <p>{{ message }}</p>
+            </div>
           </div>
         </div>
       </div>
@@ -87,6 +89,14 @@
 </template>
 
 <script>
+
+var send_message = new Vue({
+  el: '#send_message',
+  data: {
+    message: 'Hello Vue!'
+  }
+})
+
 export default {
     name: 'First',
     data: function() {
