@@ -95,7 +95,7 @@ export default {
   color: navy;
 }
 
-.search a{
+.search {
   background-color : #000000;
   color: #F4A460;
   width: 50px;
