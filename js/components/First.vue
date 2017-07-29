@@ -43,8 +43,7 @@
         <div class="send">
         <input v-model="message" placeholder="投稿する！">
           <router-link to="/second"><i class="send_bottun">
-            <span class="fa fa-send"></span></router-link>
-          </i>
+            <span class="fa fa-send"></span></i></router-link>
         </div>
 
     <div id="attack_list" v-if="command_state === ''">
