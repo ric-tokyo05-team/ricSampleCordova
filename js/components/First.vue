@@ -91,7 +91,6 @@ export default {
   width: 50px;
   height: 50px;
   color: navy;
-  float: ;
 }
 
 .tweet a{background-color : #55acee;}
