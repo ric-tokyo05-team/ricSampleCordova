@@ -1,15 +1,9 @@
 <template>
   <div id="content">
     <input v-model="command" placeholder="新宿 ディナー"　@keyup.enter="select_command">
-    <div class="test">
-      <a class="tweet" href="https://google.com/"><span class="fa fa-search" style="color:#4dccf5"></span></a>
-        <i class="fa fa-search" aria-hidden="true"></i>
-      <a class="icon-search" href="https://google.com"></a>
-        <i class="icon-search" aria-hidden="true"></i>
-      <span class="icon-search" style="color:#4dccf5"></span>
-      <span class="fa fa-search" style="color:#4dccf5"></span>
-      </li>
-    </div>
+      <a class="tweet" href="https://google.com/">
+        <span class="fa fa-search" style="color:#4dccf5"></span>
+      </a>
 
 
     <div id="attack_list" v-if="command_state === ''">
@@ -97,11 +91,7 @@ export default {
   width: 50px;
   height: 50px;
   color: navy;
-  float: left;
-}
-
-input[type=submit]{
-font-family: FontAwesome;
+  float: ;
 }
 
 .tweet a{background-color : #55acee;}
