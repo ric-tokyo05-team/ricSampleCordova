@@ -2,7 +2,7 @@
   <div id="content">
     <input v-model="command" placeholder="新宿 ディナー"　@keyup.enter="select_command">
       <a class="tweet" href="https://google.com/">
-        <span class="fa fa-search" style="color:#4dccf5"></span>
+        <span class="fa fa-search" style="color:brack"></span>
       </a>
 
 
