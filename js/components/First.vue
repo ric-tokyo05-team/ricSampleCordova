@@ -9,7 +9,7 @@
 
       <div class="chat-box">
       <div class="chat-face">
-        <i class="fa fa-user-circle-o" aria-hidden="true"></i>
+        <i class="fa fa-user-circle-o fa-3x" aria-hidden="true"></i>
       </div>
       <div class="chat-area">
         <div class="chat-hukidashi">
@@ -20,7 +20,7 @@
 
     <div class="chat-box">
       <div class="chat-face">
-        <i class="fa fa-user-circle-o" aria-hidden="true"></i>
+        <i class="fa fa-user-circle-o fa-3x" aria-hidden="true"></i>
       </div>
       <div class="chat-area">
         <div class="chat-hukidashi someone">
@@ -117,6 +117,7 @@ export default {
   color: navy;
 }
 
+/* 検索ボタン */
 .search {
   background-color : #FFFFFF;
   color: #4682B4;
