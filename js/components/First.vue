@@ -192,7 +192,7 @@ export default {
 .chat-hukidashi-friend:after {
     content: "";
     position: absolute;
-    top: 50%; left: -10px;
+    top: 50%; right: : -10px;
     margin-top: -10px;
     display: block;
     width: 0px;
