@@ -135,6 +135,7 @@ export default {
 .chat-face {
     float: left;
     margin-right: -120px;
+    color: #4682B4;
 }
 .chat-face img{
     border-radius: 30px;
