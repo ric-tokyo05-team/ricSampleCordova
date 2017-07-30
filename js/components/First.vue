@@ -2,8 +2,8 @@
   <div id="content">
     <div class="search">
     <input v-model="command" placeholder="新宿 ディナー"　@keyup.enter="select_command">
-      <a class="search_bottun" href="https://google.com/">
-        <span class="fa fa-search"></span>
+     <router-link to="/second"><i class="search_bottun">
+      <span class="fa fa-search"></span></i></router-link>
       </a>
     </div>
 
