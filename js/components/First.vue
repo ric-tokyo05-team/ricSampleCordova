@@ -5,44 +5,44 @@
      <router-link to="/second"><i class="search_bottun">
       <span class="fa fa-search"></span></i></router-link>
     </div>
-<div id="app-6">
+    <div id="app-6">
       <div class="chat-box">
-        <div class="chat-face">
-          <i class="fa fa-user-circle-o fa-3x" aria-hidden="true"></i>
-        </div>
-      <div class="chat-area">
-        <div class="chat-hukidashi">
-          新宿でおすすめのディナーを教えて！
-        </div>
-      </div>
-    </div>
-
-    <div class="chat-box">
-      <div class="chat-area">
-        <div class="chat-face-friend">
-          <i class="fa fa-user-circle fa-3x" aria-hidden="true"></i>
-        </div>
-        <div class="chat-hukidashi-friend someone">
-          レストラン〇〇なんていかがでしょうか。
-        </div>
-      </div>
-    </div>
-
-        <div class="chat-box">
         <div class="chat-face">
           <i class="fa fa-user-circle-o fa-3x" aria-hidden="true"></i>
         </div>
         <div class="chat-area">
           <div class="chat-hukidashi">
-              <p>・・・ {{ message }}</p>
-            </div>
+            新宿でおすすめのディナーを教えて！
           </div>
+        </div>
+      </div>
+
+      <div class="chat-box">
+        <div class="chat-area">
+          <div class="chat-face-friend">
+            <i class="fa fa-user-circle fa-3x" aria-hidden="true"></i>
+          </div>
+          <div class="chat-hukidashi-friend someone">
+            レストラン〇〇なんていかがでしょうか。
+          </div>
+        </div>
+      </div>
+
+      <div class="chat-box">
+        <div class="chat-face">
+          <i class="fa fa-user-circle-o fa-3x" aria-hidden="true"></i>
+        </div>
+        <div class="chat-area">
+          <div class="chat-hukidashi">
+            <p>{{ message }}</p>
+          </div>
+        </div>
         <div class="send">
         <input v-model="message" placeholder="投稿する！">
           <router-link to="/second"><i class="send_bottun">
             <span class="fa fa-send"></span></i></router-link>
         </div>
-</div>
+      </div>
 <div>
     <div id="attack_list" v-if="command_state === ''">
         <ul>
