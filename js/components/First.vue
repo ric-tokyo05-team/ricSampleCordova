@@ -43,6 +43,7 @@
             <span class="fa fa-send"></span></i></router-link>
         </div>
       </div>
+    </div>
 <div>
     <div id="attack_list" v-if="command_state === ''">
         <ul>
