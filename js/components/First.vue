@@ -117,7 +117,7 @@ export default {
             this.$store.commit("select_command", this.command);
         }
     }
-}
+},
 
 var app6 = new Vue({
 el: '#app-6',
