@@ -5,7 +5,7 @@
      <router-link to="/second"><i class="search_bottun">
       <span class="fa fa-search"></span></i></router-link>
     </div>
-    <div id="app-6">
+
       <div class="chat-box">
         <div class="chat-face">
           <i class="fa fa-user-circle-o fa-3x" aria-hidden="true"></i>
@@ -27,7 +27,7 @@
           </div>
         </div>
       </div>
-
+    <div id="app-6">
       <div class="chat-box">
         <div class="chat-face">
           <i class="fa fa-user-circle-o fa-3x" aria-hidden="true"></i>
