@@ -37,7 +37,7 @@
           <div class="chat-hukidashi">
             <div id="app-6">
               <p>・・・ {{ message }}</p>
-            </div>
+
           </div>
         </div>
       </div>
