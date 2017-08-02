@@ -33,7 +33,7 @@
         </div>
         <div class="chat-area">
           <div class="chat-hukidashi">
-            <div id="app-6"><p>{{ message }}</p></div>
+            <div id="app-6"><p>{{ message }}</p><input v-model="message" placeholder="投稿する！"></div>
           </div>
         </div>
         <div class="send">
