@@ -38,7 +38,6 @@
               <p>・・・ {{ message }}</p>
             </div>
           </div>
-        </div>
 
 
         <div class="send">
