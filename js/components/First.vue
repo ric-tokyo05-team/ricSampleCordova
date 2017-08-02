@@ -79,15 +79,6 @@
     <div id="nigeru" v-if="command_state === 'にげる'">
         <p>にげられない</p>
     </div>
-
-    var app6 = new Vue({
-  el: '#app-6',
-  data: {
-    message: 'Hello Vue!'
-  }
-})
-
-
 </div>
 </div>
 </template>
@@ -127,6 +118,13 @@ export default {
         }
     }
 }
+
+var app6 = new Vue({
+el: '#app-6',
+data: {
+message: 'Hello Vue!'
+}
+})
 
 </script>
 
