@@ -33,7 +33,7 @@
         </div>
         <div class="chat-area">
           <div class="chat-hukidashi">
-            <p>{{ message }}</p>
+            <div id="app-6"><p>{{ message }}</p></div>
           </div>
         </div>
         <div class="send">
@@ -42,6 +42,7 @@
             <span class="fa fa-send"></span></i></router-link>
         </div>
       </div>
+
 <div>
     <div id="attack_list" v-if="command_state === ''">
         <ul>
@@ -78,6 +79,15 @@
     <div id="nigeru" v-if="command_state === 'にげる'">
         <p>にげられない</p>
     </div>
+
+    var app6 = new Vue({
+  el: '#app-6',
+  data: {
+    message: 'Hello Vue!'
+  }
+})
+
+
 </div>
 </div>
 </template>
