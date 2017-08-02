@@ -85,6 +85,13 @@
 
 <script>
 
+var app6 = new Vue({
+el: '#app-6',
+data: {
+message: ''
+}
+}),
+
 
 export default {
     name: 'First',
@@ -117,14 +124,7 @@ export default {
             this.$store.commit("select_command", this.command);
         }
     }
-},
-
-var app6 = new Vue({
-el: '#app-6',
-data: {
-message: ''
 }
-})
 
 </script>
 
