@@ -6,7 +6,7 @@
       <span class="fa fa-search"></span></i></router-link>
       </a>
     </div>
-
+<div id="app-6">
       <div class="chat-box">
         <div class="chat-face">
           <i class="fa fa-user-circle-o fa-3x" aria-hidden="true"></i>
@@ -35,19 +35,19 @@
         </div>
         <div class="chat-area">
           <div class="chat-hukidashi">
-            <div id="app-6">
               <p>・・・ {{ message }}</p>
-
+            </div>
           </div>
         </div>
-      </div>
+
 
         <div class="send">
         <input v-model="message" placeholder="投稿する！">
           <router-link to="/second"><i class="send_bottun">
             <span class="fa fa-send"></span></i></router-link>
         </div>
-
+</div>
+<div>
     <div id="attack_list" v-if="command_state === ''">
         <ul>
             <li v-for="c in command_list">
