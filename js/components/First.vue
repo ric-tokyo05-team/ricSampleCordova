@@ -4,7 +4,6 @@
     <input v-model="command" placeholder="新宿 ディナー"　@keyup.enter="select_command">
      <router-link to="/second"><i class="search_bottun">
       <span class="fa fa-search"></span></i></router-link>
-      </a>
     </div>
 <div id="app-6">
       <div class="chat-box">
@@ -38,8 +37,6 @@
               <p>・・・ {{ message }}</p>
             </div>
           </div>
-
-
         <div class="send">
         <input v-model="message" placeholder="投稿する！">
           <router-link to="/second"><i class="send_bottun">
