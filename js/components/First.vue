@@ -35,7 +35,9 @@
         </div>
         <div class="chat-area">
           <div class="chat-hukidashi">
-              ・・・
+            <div id="app-6">
+              <p>・・・ {{ message }}</p>
+            </div>
           </div>
         </div>
       </div>
@@ -119,6 +121,13 @@ export default {
         }
     }
 }
+
+var app6 = new Vue({
+  el: '#app-6',
+  data: {
+    message: 'Hello Vue!'
+  }
+})
 </script>
 
 <style lang="scss">
