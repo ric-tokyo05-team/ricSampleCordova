@@ -27,7 +27,6 @@
           </div>
         </div>
       </div>
-    <div id="app-6">
       <div class="chat-box">
         <div class="chat-face">
           <i class="fa fa-user-circle-o fa-3x" aria-hidden="true"></i>
@@ -43,7 +42,6 @@
             <span class="fa fa-send"></span></i></router-link>
         </div>
       </div>
-    </div>
 <div>
     <div id="attack_list" v-if="command_state === ''">
         <ul>
