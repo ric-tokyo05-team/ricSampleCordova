@@ -85,6 +85,8 @@
 
 <script>
 
+
+
 export default {
     name: 'First',
     data: function() {
@@ -92,12 +94,12 @@ export default {
             command: "",
         }
     },
-    var app6 = new Vue({
-    el: '#app-6',
-    data: {
-    message: ''
-    }
-    }),
+    // var app6 = new Vue({
+    // el: '#app-6',
+    // data: {
+    // message: ''
+    // }
+    // }),
 
     computed: {
         command_state: function() {
