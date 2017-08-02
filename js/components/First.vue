@@ -119,12 +119,12 @@ export default {
     }
 }
 
-var app6 = new Vue({
-el: '#app-6',
-data: {
-message: ''
-}
-})
+// var app6 = new Vue({
+// el: '#app-6',
+// data: {
+// message: ''
+// }
+// })
 
 </script>
 
