@@ -1,254 +1,373 @@
 <template>
-  <div id="content">
-    <div class="search">
-    <input v-model="command" placeholder="新宿 ディナー"　@keyup.enter="select_command">
-     <router-link to="/second"><i class="search_bottun">
-      <span class="fa fa-search"></span></i></router-link>
-    </div>
-
-      <div class="chat-box">
-        <div class="chat-face">
-          <i class="fa fa-user-circle-o fa-3x" aria-hidden="true"></i>
-        </div>
-        <div class="chat-area">
-          <div class="chat-hukidashi">
-            新宿でおすすめのディナーを教えて！
-          </div>
-        </div>
-      </div>
-
-      <div class="chat-box">
-        <div class="chat-area">
-          <div class="chat-face-friend">
-            <i class="fa fa-user-circle fa-3x" aria-hidden="true"></i>
-          </div>
-          <div class="chat-hukidashi-friend someone">
-            レストラン〇〇なんていかがでしょうか。
-          </div>
-        </div>
-      </div>
-      <div class="chat-box">
-        <div class="chat-face">
-          <i class="fa fa-user-circle-o fa-3x" aria-hidden="true"></i>
-        </div>
-        <div class="chat-area">
-          <div class="chat-hukidashi">
-            <div id="app-6"><p>{{ message }}</p><input v-model="message" placeholder="投稿する！"></div>
-          </div>
-        </div>
-        <div class="send">
-        <input v-model="message" placeholder="投稿する！">
-          <router-link to="/second"><i class="send_bottun">
-            <span class="fa fa-send"></span></i></router-link>
-        </div>
-      </div>
-
-<div>
-    <div id="attack_list" v-if="command_state === ''">
-        <ul>
-            <li v-for="c in command_list">
-                {{ c }}
-            </li>
-        </ul>
-    </div>
-
-    <div id="attack_list" v-if="command_state === 'たたかう'">
-        <ul>
-            <li v-for="a in attack_list">
-                {{ a }}
-            </li>
-        </ul>
-    </div>
-
-    <div id="item_list" v-if="command_state === 'どうぐ'">
-        <ul>
-            <li v-for="i in item_list">
-                {{ i }}
-            </li>
-        </ul>
-    </div>
-
-    <div id="magic_list" v-if="command_state === 'まほう'">
-        <ul>
-            <li v-for="m in magic_list">
-                {{ m }}
-            </li>
-        </ul>
-    </div>
-
-    <div id="nigeru" v-if="command_state === 'にげる'">
-        <p>にげられない</p>
-    </div>
-</div>
-</div>
+ <div id="app">
+   <main class="main-container">
+     <div class="chat-timeline">
+       <balloon
+         v-for="chat in chatLogs"
+         :speaker="chat.speaker"
+         :name="chat.name"
+         :message="chat.message">
+       </balloon>
+     </div>
+     <chat-form
+       @submit-message="submit"
+       apply-event="submit-message">
+     </chat-form>
+   </main>
+ </div>
 </template>
 
 <script>
+var Balloon = {
+ template: `<div class="conversation-balloon" :class="speaker">
+ <div class="avatar">
+ <i class="fa fa-user-circle-o fa-5x"></i>
+   <p class="name">{{ name }}</p>
+ </div>
+ <p class="message">{{ message }}</p>
+</div>`,
+ props: {
+   name: {
+     type: String,
+     required: true
+   },
+   speaker: {
+     type: String,
+     required: true,
+     validator: value => {
+       return ['my', 'other'].includes(value);
+     }
+   },
+   message: {
+     type: String,
+     required: true
+   }
+ }
+};
 
-
+var ChatForm = {
+ template: `<div class="chat-form">
+ <div class="form-container">
+   <input type="text" class="message" v-model="message">
+   <button class="submit" @click="submit">送信</button>
+ </div>
+</div>`,
+ props: {
+   applyEvent: {
+     type: String,
+     required: true
+   }
+ },
+ data () {
+   return {
+     message: ''
+   }
+ },
+ methods: {
+   submit () {
+     this.$emit(this.applyEvent, this.message)
+     this.message = '';
+   }
+ }
+};
 
 export default {
     name: 'First',
-    data: function() {
-        return {
-            command: "",
-        }
-    },
-    // var app6 = new Vue({
-    // el: '#app-6',
-    // data: {
-    // message: ''
-    // }
-    // }),
 
-    computed: {
-        command_state: function() {
-            return this.$store.state.command;
-        },
-        command_list: function() {
-            return this.$store.state.command_list;
-        },
-        attack_list: function() {
-            return this.$store.state.attack_list;
-        },
-        item_list: function() {
-            return this.$store.state.item_list;
-        },
-        magic_list: function() {
-            return this.$store.state.magic_list;
-        }
-    },
+     components: {
+       balloon: Balloon,
+       chatForm: ChatForm
+     },
+     data () {
+       return {
+         chatLogs: [
+            { name: '太郎', speaker: 'my', message: '新宿でおすすめのレストランは？' },
+            { name: 'bot', speaker: 'other', message: 'レストラン〇〇' }
+         ]
+       }
+     },
+     methods: {
+       submit (value) {
+         this.chatLogs.push({
+           name: '太郎',
+           speaker: 'my',
+           message: value
+         });
 
-    methods: {
-        select_command(event) {
-            this.$store.commit("select_command", this.command);
-        }
-    }
-}
+         this.botSubmit();
+         this.scrollDown();
+       },
+       botSubmit () {
+         setTimeout(() => {
+           this.chatLogs.push({
+             name: 'bot',
+             speaker: 'other',
+             message: 'すみません、よくわかりません。'
+           });
+
+           this.scrollDown();
+         }, 1000);
+       },
+       scrollDown () {
+         const target = this.$el.querySelector('.chat-timeline');
+         setTimeout(() => {
+           const height = target.scrollHeight - target.offsetHeight;
+           target.scrollTop += 10;
+
+           if (height <= target.scrollTop) {
+             return;
+           } else {
+             this.scrollDown();
+           }
+         }, 0);
+       }
+     }
+    };
 
 </script>
 
 <style lang="scss">
 
-#content {
-    width: 100%;
-    height: 2000px;
-    margin-top: 60px;
-}
+$my-balloon-color: white;
+$other-balloon-color: Teal;
 
-#test {
-  width: 50px;
-  height: 50px;
-  color: navy;
-}
+.conversation-balloon {
+  &.my {
+    text-align: right;
+    > .avatar {
+      float: right;
+    }
+    > .message {
+      margin-right: 20px;
+      background-color: $my-balloon-color;
+      border: 2px solid Teal;
+      text-align: left;
 
-/* 検索ボタン */
-.search{
-  text-align: center;
-  margin-bottom: 10px;
-}
+      &::before {
+        right: -20px;
+        transform: rotate(-25deg);
+        border-left: 18px solid Teal;
+      }
+    }
+  }
 
-.search_bottun {
-  background-color : #FFFFFF;
-  color: #4682B4;
-  width: 60px;
-  height: 60px;
-}
+  &.other {
+    text-align: left;
+    > .avatar {
+      float: left;
+    }
+    > .message {
+      margin-left: 20px;
+      background-color: $other-balloon-color;
 
-/* 投稿ボタン */
-.send{
-  text-align: center;
-  float: top;
-  margin-bottom: 10px;
-}
+      &::before {
+        left: -20px;
+        transform: rotate(25deg);
+        border-right: 18px solid $other-balloon-color;
+      }
+    }
+  }
 
-.send_bottun {
-  background-color : #FFFFFF;
-  color: #4682B4;
-  width: 60px;
-  height: 60px;
-}
+  >.avatar {
+    width: 80px;
+    text-align: center;
 
-/* チャットレイアウト */
-.chat-box {
-    width: 100%;
-    height: auto;
-    overflow: hidden; /*floatの解除*/
-    margin-bottom: 10px;
-}
+    // floatは各コンポーネントで定義
+    &::after {
+      clear: both;
+    }
 
-.chat-face {
-    float: left;
-    margin-right: -120px;
-    color: #4682B4;
-}
+    > img {
+      display: block;
+      margin: 0 auto;
+      width: 60px;
+      height: 60px;
+      border-radius: 50%;
 
-.chat-face-friend {
-    float: right;
-    margin-left: auto;
-    color: #4682B4;
-}
+      margin-bottom: 5px;
+    }
+    > .name {
+      width: 100%;
+      text-align: center;
+      color: teal;
+      font-size: 0.8rem;
+      word-wrap: break-word;
+    }
+  }
 
-.chat-face img{
+  > .message {
+    display: inline-block;
+    max-width: 280px;
+    padding: 10px 30px;
     border-radius: 30px;
-    border: 1px solid #ccc;
-    box-shadow: 0 0 4px #ddd;
-}
-.chat-area {
-    width: 100%;
-    float: right;
-}
-.chat-hukidashi {
-    display: inline-block; /*コメントの文字数に合わせて可変*/
-    padding: 15px 10px;
-    margin-left: 70px;
-    /* border: 1px solid gray; ←削除 */
-    border-radius: 10px;
-    position: relative; /*追記*/
-    background-color: #D9F0FF; /*追記*/
-}
+    font-size: 1.3rem;
+    min-height: 30px;
+    word-wrap: break-word;
 
-.chat-hukidashi-friend {
-    display: inline-block; /*コメントの文字数に合わせて可変*/
-    padding: 15px 10px;
-    margin-right: 20px;
-    /* border: 1px solid gray; ←削除 */
-    border-radius: 10px;
-    position: relative; /*追記*/
-    background-color: #D9F0FF; /*追記*/
-}
-
-/* ↓追記↓ */
-.chat-hukidashi:after {
-    content: "";
-    position: absolute;
-    top: 50%; left: -10px;
-    margin-top: -10px;
-    display: block;
-    width: 0px;
-    height: 0px;
-    border-style: solid;
-    border-width: 10px 10px 10px 0;
-    border-color: transparent #D9F0FF transparent transparent;
-}
-
-.chat-hukidashi-friend:after {
-    content: "";
-    position: absolute;
-    top: 50%; right: -20px;
-    margin-top: -10px;
-    display: block;
-    width: 0px;
-    height: 0px;
-    border-style: solid;
-    border-width: 10px 10px 10px 10px;
-    border-color: transparent transparent transparent #BCF5A9;
-}
-
-.someone {
-    background-color: #BCF5A9;
     position: relative;
-    float: right;
+
+    &::before {
+      content: '';
+      display: block;
+      position: absolute;
+      top: 5px;
+      border: 8px solid transparent;
+      // left/right, border-right, tranform は各コンポーネントで定義
+    }
+  }
+}
+
+
+> img {
+   display: block;
+   margin: 0 auto;
+   width: 60px;
+   height: 60px;
+   border-radius: 50%;
+
+   margin-bottom: 5px;
+ }
+ > .name {
+   width: 100%;
+   text-align: center;
+   color: white;
+   font-size: 0.8rem;
+   word-wrap: break-word;
+ }
+
+
+> .message {
+ display: inline-block;
+ max-width: 280px;
+ padding: 10px 30px;
+ border-radius: 30px;
+ font-size: 1.3rem;
+ min-height: 30px;
+ word-wrap: break-word;
+
+ position: relative;
+
+ &::before {
+   content: '';
+   display: block;
+   position: absolute;
+   top: 5px;
+   border: 8px solid transparent;
+   // left/right, border-right, tranform は各コンポーネントで定義
+ }
+}
+/* ボタンスタイルのリセット */
+button {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  outline: none;
+  padding: 0;
+  appearance: none;
+}
+
+.form-container {
+  position: relative;
+  margin-bottom: 80px;
+  height: 40px;
+  > .message {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 80px;
+    width: 100%;
+
+    font-size: 1.3rem;
+    padding: 0 20px;
+  }
+  > .submit {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+
+    width: 80px;
+    text-align: center;
+    background-color: #4F83E1;
+    color: white;
+    font-size: 1.6rem;
+  }
+}
+
+
+/* form */
+.chat-form {
+position: fixed;
+bottom: 0;
+right: 0;
+left: 0;
+
+background-color: white;
+}
+.form-container {
+position: relative;
+height: 40px;
+> .message {
+ position: absolute;
+ top: 0;
+ bottom: 0;
+ left: 0;
+ right: 80px;
+ width: 100%;
+
+ font-size: 1.3rem;
+ padding: 0 20px;
+}
+> .submit {
+ position: absolute;
+ top: 0;
+ bottom: 0;
+ right: 0;
+
+ width: 80px;
+ text-align: center;
+ background-color: Teal;
+ color: white;
+ font-size: 1.6rem;
+}
+}
+/* base */
+body {
+  font-size: 62.5%;
+  box-sizing: border-box;
+}
+button {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  outline: none;
+  padding: 0;
+  appearance: none;
+}
+
+/* timeline */
+$tl-background-color: white;
+
+.chat-timeline {
+  position: fixed;
+  top: 80px;
+  bottom: 80px;
+  left: 0;
+  right: 0;
+
+  min-width: 480px;
+  padding: 30px;
+
+  background-color: $tl-background-color;
+  overflow-y: auto;
+
+  display: flex;
+  flex-direction: column;
+
+  > .conversation-balloon {
+    margin-bottom: 30px;
+  }
 }
 
 </style>
