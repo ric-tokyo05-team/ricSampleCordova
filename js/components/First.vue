@@ -128,7 +128,7 @@ export default {
 
 <style lang="scss">
 
-$my-balloon-color: white;
+$my-balloon-color: lightblue;
 $other-balloon-color: Teal;
 
 .conversation-balloon {
@@ -140,13 +140,13 @@ $other-balloon-color: Teal;
     > .message {
       margin-right: 20px;
       background-color: $my-balloon-color;
-      border: 2px solid Teal;
-      text-align: left;
+      border: 2px solid $my-balloon-color;
+      text-align: $my-balloon-color;
 
       &::before {
         right: -20px;
         transform: rotate(-25deg);
-        border-left: 18px solid Teal;
+        border-left: 18px solid $my-balloon-color;
       }
     }
   }
